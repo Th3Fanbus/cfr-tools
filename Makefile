@@ -1,4 +1,7 @@
-## Hell's cursed Makefile
+## SPDX-License-Identifier: BSD-3-Clause OR GPL-2.0-or-later
+##
+## Hell's cursed but reusable Makefile
+##
 
 OBJS_DIR  := obj/
 
