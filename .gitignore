@@ -30,9 +30,13 @@ a.out
 # Program executables
 cfr_read
 cfr_write
+cfr_to_html
 
 # Raw CFR data in binary format
 *.cfr
+
+# CFR to HTML output
+*.html
 
 # vscode stuffs
 *.swp
