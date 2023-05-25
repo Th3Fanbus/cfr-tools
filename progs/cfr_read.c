@@ -274,10 +274,10 @@ static uint32_t sm_read_opt_varchar(char *current)
 	cfr_log_prop_val(LOG_STR, "flags", print_flags(option->flags));
 
 	current += sizeof(*option);
+	current += sm_read_string_default_value(current);
 	current += sm_read_opt_name(current);
 	current += sm_read_ui_name(current);
 	current += sm_read_ui_helptext(current);
-	current += sm_read_string_default_value(current);
 
 	assert(current == limit);
 	return option->size;

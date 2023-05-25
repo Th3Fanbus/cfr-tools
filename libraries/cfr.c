@@ -170,10 +170,10 @@ static uint32_t sm_write_opt_varchar(char *current, const struct sm_obj_varchar 
 	option->size = sizeof(*option);
 
 	current += option->size;
+	current += sm_write_string_default_value(current, sm_varchar->default_value);
 	current += sm_write_opt_name(current, sm_varchar->opt_name);
 	current += sm_write_ui_name(current, sm_varchar->ui_name);
 	current += sm_write_ui_helptext(current, sm_varchar->ui_helptext);
-	current += sm_write_string_default_value(current, sm_varchar->default_value);
 
 	option->size = cfr_record_size((char *)option, current);
 	return option->size;

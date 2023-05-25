@@ -310,10 +310,10 @@ static uint32_t sm_read_opt_varchar(char *current)
 	ensure_tag_ok(option, LB_TAG_CFR_OPTION_VARCHAR);
 
 	current += sizeof(*option);
+	current += sm_read_string_default_value(&default_value, current);
 	current += sm_read_opt_name(&opt_name, current);
 	current += sm_read_ui_name(&ui_name, current);
 	current += sm_read_ui_helptext(&ui_helptext, current);
-	current += sm_read_string_default_value(&default_value, current);
 	assert(opt_name);
 	assert(ui_name);
 	assert(ui_helptext);

@@ -190,10 +190,10 @@ struct lb_cfr_varchar_option {
 	uint32_t object_id;
 	uint32_t flags;		/* enum cfr_option_flags */
 	/*
+	 * CFR_VARCHAR		default_value
 	 * CFR_OPT_NAME		opt_name
 	 * CFR_UI_NAME		ui_name
 	 * CFR_UI_HELPTEXT	ui_helptext (Optional)
-	 * CFR_VARCHAR		default_value
 	 */
 };
 
